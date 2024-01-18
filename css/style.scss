@@ -1,6 +1,7 @@
 $white: #ffffff;
 $black: #000000;
 $primary1: #252525;
+// $primary1: #82c419;
 // $btnColor: #82c419;
 $btnColor: #f9690e;
 
@@ -628,12 +629,12 @@ a:focus {
 .why_section {
   .why_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .box {
     display: flex;
-    flex-direction: column;
+    flex-direction: center;
     align-items: center;
     text-align: center;
     margin: 45px 10px 0 10px;
@@ -653,9 +654,22 @@ a:focus {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 20px;
         transition: all 0.3s;
         box-shadow: 5px 5px 10px rgb(#acabab, 80%);
       }
+    }
+
+    .spn-class {
+      display: block;
+      margin-right: 20px;
+      font-weight: bold;
+      border: 1px solid #ffccee;
+      padding: 20px 30px;
+      box-shadow: 5px 5px 7px #ffeecc;
+      text-transform: uppercase;
+      font-size: 20px;
+      transition: all 0.3s;
     }
 
     .detail-box {
@@ -687,10 +701,24 @@ a:focus {
     }
 
     &:hover {
-      img {
+      .spn-class {
         background-color: $primary1;
+        color: white;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .spn-class {
+    display: block;
+    margin-right: 20px;
+    font-weight: bold;
+    border: 1px solid #ffccee;
+    padding: 10px 15px !important;
+    box-shadow: 5px 5px 7px #ffeecc;
+    text-transform: uppercase;
+    font-size: 14px !important;
   }
 }
 
