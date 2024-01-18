@@ -521,17 +521,19 @@ a:focus {
   flex: 1;
 }
 .why_section .box .img-box {
-  width: 100%;
-  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9690e;
-  border-radius: 15px;
-  transition: all 0.3s;
+  margin-top: 50px;
 }
 .why_section .box .img-box img {
-  width: 45px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s;
+  box-shadow: 5px 5px 10px rgba(172, 171, 171, 0.8);
 }
 .why_section .box .detail-box {
   flex: 1;
@@ -557,7 +559,7 @@ a:focus {
   margin: 0;
   margin-left: 5px;
 }
-.why_section .box:hover .img-box {
+.why_section .box:hover img {
   background-color: #252525;
 }
 
