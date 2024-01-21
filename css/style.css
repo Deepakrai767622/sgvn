@@ -288,7 +288,7 @@ a:focus {
 
 /*end header section*/
 .slider_section {
-  background-image: url(../images/slider-bg.png);
+  background-image: url(../images/old2.jpg);
   background-size: cover;
   background-position: center;
   flex: 1;
@@ -421,6 +421,238 @@ a:focus {
   z-index: 2;
 }
 
+/* window BEGIN */
+.blogspot {
+  margin: 50px 0;
+}
+.blogspot .left {
+  display: flex;
+  justify-content: space-between;
+}
+.blogspot text {
+  fill: #f9690e;
+  font-size: 0.5rem;
+}
+.blogspot .center {
+  position: relative;
+}
+.blogspot .center svg {
+  position: absolute;
+  transform: rotate(-50deg);
+  top: -72px;
+  left: -44px;
+}
+.blogspot .left-nav-links li {
+  margin: 30px 10px;
+  cursor: pointer;
+}
+.blogspot .left-nav-links li:hover {
+  text-decoration: underline;
+}
+.blogspot .social-icons li {
+  margin: 30px 3px;
+  font-size: 1rem;
+}
+.blogspot .border {
+  line-height: 20px;
+  border-bottom: solid 2px;
+}
+.blogspot #arcs div {
+  border: 1px solid #f9690e;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  padding: 0.5em;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 15px;
+  left: -22px;
+}
+.blogspot .lines {
+  height: 5px;
+  width: 100px;
+  border: 1px solid #f9690e;
+  position: absolute;
+  top: 65px;
+  left: -18px;
+  transform: rotate(-45deg);
+  border-left: 0px;
+  border-right: 0px;
+}
+.blogspot .blog-section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogspot .blog-post-container {
+  width: 90%;
+  display: flex;
+}
+.blogspot .illustration {
+  position: relative;
+}
+.blogspot .illustration img {
+  width: 340px;
+}
+.blogspot .date {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+  height: 100px;
+  width: 25px;
+  background: #f9690e;
+  color: white;
+  font-weight: bold;
+}
+.blogspot .blog-snippet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #fff;
+  padding: 20px;
+}
+.blogspot .tag {
+  display: inline;
+  width: 40px;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  border-bottom: 10px solid #fdf3f2;
+  line-height: 1px;
+}
+.blogspot .title {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  color: #f9690e;
+}
+.blogspot .para {
+  font-size: 1rem;
+}
+.blogspot .para-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.blogspot .comment {
+  font-weight: bold;
+}
+.blogspot .read-more {
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.blogspot .read-more:hover {
+  text-decoration: underline;
+}
+.blogspot hr {
+  margin: 30px 30px 0 60px;
+  border: 1px solid #f9690e;
+  opacity: 0.1;
+}
+.blogspot a {
+  text-decoration: none;
+  color: #f9690e;
+}
+.blogspot a:active {
+  color: black;
+}
+.blogspot a:visited {
+  color: black;
+}
+.blogspot .window {
+  background: rgba(249, 105, 14, 0.2);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0px 0px 20px #d4d4d4;
+  padding: 20px 0;
+}
+.blogspot .titlebar {
+  background: linear-gradient(top, #ebebeb, #d5d5d5);
+  color: #4d494d;
+  font-size: 11pt;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #f3f1f3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  cursor: default;
+}
+.blogspot .buttons {
+  padding-left: 8px;
+  padding-top: 3px;
+  float: left;
+  line-height: 0px;
+}
+.blogspot .close {
+  background: #ff5c5c;
+  font-size: 9pt;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  display: inline-block;
+}
+.blogspot .close:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+}
+.blogspot .close:active .closebutton {
+  color: #4e0002;
+}
+.blogspot .minimize {
+  background: #ffbd4c;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  display: inline-block;
+}
+.blogspot .minimize:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+}
+.blogspot .minimize:active .minimizebutton {
+  color: #5a2607;
+}
+.blogspot .zoom {
+  background: #00ca56;
+  font-size: 9pt;
+  line-height: 11px;
+  margin-left: 6px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  display: inline-block;
+}
+.blogspot .zoom:active {
+  background: #029740;
+  border: 1px solid #128435;
+}
+.blogspot .zoom:active .zoombutton {
+  color: #003107;
+}
+
+/* window END */
 .about_section {
   color: #ffffff;
   padding-left: 10%;
