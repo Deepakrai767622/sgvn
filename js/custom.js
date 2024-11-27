@@ -41,6 +41,7 @@ $(".team_carousel").owlCarousel({
     },
   },
 });
+
 // gallery event.....................
 var previous = document.getElementById("btnPrevious");
 var next = document.getElementById("btnNext");
