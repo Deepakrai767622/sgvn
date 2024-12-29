@@ -43,117 +43,116 @@ $(".team_carousel").owlCarousel({
 });
 
 // gallery event.....................
-var previous = document.getElementById("btnPrevious");
-var next = document.getElementById("btnNext");
-var gallery = document.getElementById("image-gallery");
-var pageIndicator = document.getElementById("page");
-var galleryDots = document.getElementById("gallery-dots");
-
-var images = [];
-for (var i = 0; i < 36; i++) {
-  images.push({
-    title: "Image " + (i + 1),
-    source: "https://picsum.photos/500/500?random&img=" + i,
-  });
-}
-
-var perPage = 12;
-var page = 1;
-var pages = Math.ceil(images.length / perPage);
-
-// Gallery dots
-for (var i = 0; i < pages; i++) {
-  var dot = document.createElement("button");
-  var dotSpan = document.createElement("span");
-  var dotNumber = document.createTextNode(i + 1);
-  dot.classList.add("gallery-dot");
-  dot.setAttribute("data-index", i);
-  dotSpan.classList.add("sr-only");
-
-  dotSpan.appendChild(dotNumber);
-  dot.appendChild(dotSpan);
-
-  dot.addEventListener("click", function (e) {
-    var self = e.target;
-    goToPage(self.getAttribute("data-index"));
-  });
-
-  galleryDots.appendChild(dot);
-}
-
-// Previous Button
-previous.addEventListener("click", function () {
-  if (page === 1) {
-    page = 1;
-  } else {
-    page--;
-    showImages();
-  }
-});
-
-// Next Button
-next.addEventListener("click", function () {
-  if (page < pages) {
-    page++;
-    showImages();
-  }
-});
-
-// Jump to page
-function goToPage(index) {
-  index = parseInt(index);
-  page = index + 1;
-
-  showImages();
-}
-
-// Load images
-function showImages() {
-  while (gallery.firstChild) gallery.removeChild(gallery.firstChild);
-
-  var offset = (page - 1) * perPage;
-  var dots = document.querySelectorAll(".gallery-dot");
-
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
+function getPageList(totalPages, page, maxLength) {
+  function range(start, end) {
+    return Array.from(Array(end - start + 1), (_, i) => i + start);
   }
 
-  dots[page - 1].classList.add("active");
+  var sideWidth = maxLength < 9 ? 1 : 2;
+  var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+  var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
 
-  for (var i = offset; i < offset + perPage; i++) {
-    if (images[i]) {
-      var template = document.createElement("div");
-      var title = document.createElement("p");
-      var titleText = document.createTextNode(images[i].title);
-      var img = document.createElement("img");
+  if (totalPages <= maxLength) {
+    return range(1, totalPages);
+  }
 
-      template.classList.add("template");
-      img.setAttribute("src", images[i].source);
-      img.setAttribute("alt", images[i].title);
+  if (page <= maxLength - sideWidth - 1 - rightWidth) {
+    return range(1, maxLength - sideWidth - 1).concat(
+      0,
+      range(totalPages - sideWidth + 1, totalPages)
+    );
+  }
 
-      title.appendChild(titleText);
-      template.appendChild(img);
-      template.appendChild(title);
-      gallery.appendChild(template);
+  if (page >= totalPages - sideWidth - 1 - rightWidth) {
+    return range(1, sideWidth).concat(
+      0,
+      range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages)
+    );
+  }
+
+  return range(1, sideWidth).concat(
+    0,
+    range(page - leftWidth, page + rightWidth),
+    0,
+    range(totalPages - sideWidth + 1, totalPages)
+  );
+}
+
+$(function () {
+  var numberOfItems = $(".card-content .card").length;
+  var limitPerPage = 4; //How many card items visible per a page
+  var totalPages = Math.ceil(numberOfItems / limitPerPage);
+  var paginationSize = 3; //How many page elements visible in the pagination
+  var currentPage;
+
+  function showPage(whichPage) {
+    if (whichPage < 1 || whichPage > totalPages) return false;
+
+    currentPage = whichPage;
+
+    $(".card-content .card")
+      .hide()
+      .slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage)
+      .show();
+
+    $(".pagination li").slice(1, -1).remove();
+
+    getPageList(totalPages, currentPage, paginationSize).forEach((item) => {
+      $("<li>")
+        .addClass("page-item")
+        .addClass(item ? "current-page" : "dots")
+        .toggleClass("active", item === currentPage)
+        .append(
+          $("<a>")
+            .addClass("page-link")
+            .attr({ href: "javascript:void(0)" })
+            .text(item || "...")
+        )
+        .insertBefore(".next-page");
+    });
+
+    $(".previous-page").toggleClass("disable", currentPage === 1);
+    $(".next-page").toggleClass("disable", currentPage === totalPages);
+    return true;
+  }
+
+  $(".pagination").append(
+    $("<li>")
+      .addClass("page-item")
+      .addClass("previous-page")
+      .append(
+        $("<a>")
+          .addClass("page-link")
+          .attr({ href: "javascript:void(0)" })
+          .text("Prev")
+      ),
+    $("<li>")
+      .addClass("page-item")
+      .addClass("next-page")
+      .append(
+        $("<a>")
+          .addClass("page-link")
+          .attr({ href: "javascript:void(0)" })
+          .text("Next")
+      )
+  );
+
+  $(".card-content").show();
+  showPage(1);
+
+  $(document).on(
+    "click",
+    ".pagination li.current-page:not(.active)",
+    function () {
+      return showPage(+$(this).text());
     }
-  }
+  );
 
-  // Animate images
-  var galleryItems = document.querySelectorAll(".template");
-  for (var i = 0; i < galleryItems.length; i++) {
-    var onAnimateItemIn = animateItemIn(i);
-    setTimeout(onAnimateItemIn, i * 100);
-  }
+  $(".next-page").on("click", function () {
+    return showPage(currentPage + 1);
+  });
 
-  function animateItemIn(i) {
-    var item = galleryItems[i];
-    return function () {
-      item.classList.add("animate");
-    };
-  }
-
-  // Update page indicator
-  pageIndicator.textContent = "Page " + page + " of " + pages;
-}
-
-showImages();
+  $(".previous-page").on("click", function () {
+    return showPage(currentPage - 1);
+  });
+});
