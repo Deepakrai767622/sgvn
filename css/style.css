@@ -193,8 +193,7 @@ p {
   border-radius: 5px;
   width: 190px;
 }
-.overlay a:hover,
-.overlay a.active {
+.overlay a:hover, .overlay a.active {
   border-color: transparent;
   background-color: #ffffff;
   color: #000000;
@@ -289,7 +288,7 @@ a:focus {
 
 /*end header section*/
 .slider_section {
-  background-image: url(../images/old2.jpg);
+  background-image: url(../images/banner/image1.jpg);
   background-size: cover;
   background-position: center;
   flex: 1;
@@ -416,8 +415,7 @@ a:focus {
   z-index: 1;
   transition: all 0.3s;
 }
-.service_section .box:hover:before,
-.service_section .box.active:before {
+.service_section .box:hover:before, .service_section .box.active:before {
   background-color: #f9690e;
   transform: scale(1.1);
   z-index: 2;
@@ -703,13 +701,7 @@ a:focus {
   padding-left: 10%;
   padding-right: 5%;
   background-color: #252525;
-  background: linear-gradient(
-    to bottom,
-    transparent 5%,
-    #252525 5%,
-    #252525 95%,
-    transparent 95%
-  );
+  background: linear-gradient(to bottom, transparent 5%, #252525 5%, #252525 95%, transparent 95%);
 }
 .wehave_section .box {
   display: flex;
@@ -1086,8 +1078,7 @@ a:focus {
 .info_section .info_links a i {
   margin-right: 5px;
 }
-.info_section .info_links a:hover,
-.info_section .info_links a.active {
+.info_section .info_links a:hover, .info_section .info_links a.active {
   color: #f9690e;
 }
 .info_section form input {
@@ -1133,6 +1124,4 @@ a:focus {
 }
 .footer_section p a {
   color: inherit;
-} /*# sourceMappingURL=style.css.map */
-
-/* events gallery */
+}/*# sourceMappingURL=style.css.map */
