@@ -7,7 +7,7 @@
 }
 
 .block-n {
-  /* width: 100vw; */
+  /* width: 100%; */
   max-width: 1450px;
   display: flex;
   justify-content: center;
@@ -109,13 +109,19 @@
 }
 
 .events-block {
-  width: 1200px;
-  max-width: 90%;
+  width: 100%;
+  max-width: 1200px;
   margin: 50px auto;
   border: 1px solid rgb(238, 96, 14);
   padding: 50px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 10%);
   text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .events-block .para-events {
+    font-size: 18px;
+  }
 }
 
 .events-block h1 {
@@ -136,7 +142,8 @@
 }
 
 .events-block img {
-  width: 80%;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 30px auto;
 }
