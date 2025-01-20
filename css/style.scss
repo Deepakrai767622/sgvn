@@ -129,6 +129,75 @@ p {
   }
 }
 
+// dksjddddddddddddddddddddddddddddddddddd
+
+.full-nav {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.full_nav {
+  /* ta bort list style (inga punkter) */
+  min-width: 70%;
+  list-style-type: none;
+  text-decoration: none;
+
+  /*
+  gör alla top-level li-element till inline-block
+*/
+  li {
+    display: inline-block;
+    //position: relative;
+  }
+  /*
+  (dock inte för eventuella undermenyer)
+*/
+  li li {
+    display: block;
+  }
+
+  /*
+  a-taggar med padding runt
+*/
+  a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    // border: 1px solid black;
+    color: #444;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px 0 0 0;
+  }
+
+  a:hover,
+  a:active {
+    background-color: pink;
+  }
+
+  /*
+  göm alla undermenyer från start (ta bort deras layout helt)
+*/
+  ul {
+    position: absolute;
+    //top:0;
+    //right:0;
+    z-index: 1;
+    display: none;
+  }
+
+  /* endast när vi för musen över visar vi menyn */
+  li:hover > ul,
+  li:active > ul {
+    display: block;
+  }
+}
+
+// djksahjhsa siahdashdkashdksahdkhaskdh
+
 .header_section .nav_container {
   margin: 0 auto;
 }
@@ -140,9 +209,8 @@ p {
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 0px 25px;
-  color: #fefeff;
+  color: #444;
   text-align: center;
-  font-family: "Roboto", sans-serif;
 }
 
 .custom_menu-btn {
