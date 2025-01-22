@@ -55,6 +55,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 10000;
 }
 
 .sub_page .hero_area {
@@ -93,6 +94,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0 0 0;
 }
 
 ul.full_nav {
@@ -117,22 +119,24 @@ ul.full_nav {
 ul.full_nav li {
   display: inline-block;
 }
+ul.full_nav ul {
+  margin: 0 0 0 -40px;
+}
 ul.full_nav li li {
   display: block;
 }
 ul.full_nav a {
   display: block;
-  padding: 5px;
   text-decoration: none;
   color: #444;
   font-weight: 500;
   font-size: 18px;
   padding: 10px 20px;
-  margin: 10px 0 0 0;
 }
 ul.full_nav a:hover,
 ul.full_nav a:active {
-  background-color: pink;
+  background-color: #f9690e;
+  color: white;
 }
 ul.full_nav ul {
   position: absolute;

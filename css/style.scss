@@ -90,6 +90,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 10000;
 }
 
 .sub_page {
@@ -136,6 +137,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px 0 0 0;
 }
 
 ul.full_nav {
@@ -154,6 +156,11 @@ ul.full_nav {
   /*
   (dock inte för eventuella undermenyer)
 */
+
+  ul {
+    margin: 0 0 0 -40px;
+  }
+
   li li {
     display: block;
   }
@@ -163,19 +170,18 @@ ul.full_nav {
 */
   a {
     display: block;
-    padding: 5px;
     text-decoration: none;
     // border: 1px solid black;
     color: #444;
     font-weight: 500;
     font-size: 18px;
     padding: 10px 20px;
-    margin: 10px 0 0 0;
   }
 
   a:hover,
   a:active {
-    background-color: pink;
+    background-color: $btnColor;
+    color: white;
   }
 
   /*
