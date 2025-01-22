@@ -14,9 +14,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>PrimeCare</title>
+    <title>Shri guru Vashishtha Nyas Trust</title>
 
-    <!-- slider stylesheet -->
+    <!--owl slider stylesheet -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -39,7 +39,7 @@
     <link href="css/responsive.css" rel="stylesheet" />
   </head>
 
-  <body class="sub_page">
+  <body>
     <div class="hero_area">
       <!-- header section strats -->
       <header class="header_section">
@@ -48,22 +48,23 @@
             <div class="contact_nav">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Address : wisigaton lpusm loram </span>
+                <span> Address : Lucknow, India </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> Email : demo@gmail.com </span>
+                <span> Email : SgvNyas@gmail.com </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span> Phone Call : +01 123455678990 </span>
+                <span> Phone Call : +91 9711991644 </span>
               </a>
             </div>
           </div>
         </div>
         <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
+          <div class="navbar">
             <div class="custom_menu-btn">
+              <div style="display: none;">
               <button onclick="openNav()">
                 <span class="s-1"> </span>
                 <span class="s-2"> </span>
@@ -77,143 +78,107 @@
                   <span class="s-2"> </span>
                   <span class="s-3"> </span>
                 </button>
-              </div>
               <div class="overlay-content">
-                <a class="" href="index.html">
+                <a class="active" href="index.html">
                   Home <span class="sr-only">(current)</span></a
                 >
                 <a class="" href="about.html"> About</a>
-                <a class="" href="events.html"> Why Us </a>
-                <a class="" href="team.html"> Our Team</a>
-                <a class="" href="testimonial.html"> Testimonial</a>
-                <a class="active" href="contact.html"> Contact Us</a>
+                <a class="" href="events.html"> Events </a>
+                <!-- <a class="" href="team.html"> Payment </a> -->
+                <!-- <a class="" href="testimonial.html"> Testimonial</a> -->
+                <a class="" href="contact.html"> Contact Us</a>
+              </div>
               </div>
             </div>
-            <a class="navbar-brand" href="index.html">
-              <span> PrimeCare </span>
-            </a>
+            <!-- A list of links -->
+             <div class="full-nav">
+            <ul class="full_nav">
+              <li>
+                <a href="/">Home</a>
+                <li>
+                <a href="about.html">About</a>
+              </li>
+              </li>
+              <li>
+                <a href="" style="pointer-events: none; cursor: default;">Events</a>
+                <!-- a sub menu -->
+                <ul>
+                  <li style="background: white;">
+                    <a href="./page/events.html">Upcoming Events</a>
+                  </li>
+                  <li style="background: white;">
+                    <a href="page/pastevents.html">Past Events</a>
+                    <!-- <ul>
+                      <li>
+                        <a href="link7">Link 7</a>
+                      </li>
+                      <li>
+                        <a href="link8">Link 8</a>
+                      </li>
+                    </ul> -->
+                  </li>
+                </ul>
+                
+              </li>
+              <li style="background: white;">
+                    <a href="./page/team.html">Team</a>
+              </li>
+              <li style="background: white;">
+                    <a href="contact.html">Contact us</a>
+              </li>
+              
+              <!-- <li>
+                <a href="link2">About</a>
+              </li>
+              <li>
+                <a href="link3">Link 3</a>
+              </li>
+              <li>
+                <a href="link4">Link 4</a>
+              </li> -->
+            </ul>
+            </div>
             <div class="user_option">
-              <a href="">
+              <!-- <a href="">
                 <span> Login </span>
                 <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <form class="form-inline">
+              </a> -->
+              <!-- <form class="form-inline">
                 <button class="btn nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
-              </form>
+              </form> -->
             </div>
           </nav>
         </div>
       </header>
       <!-- end header section -->
-    </div>
 
-    <!-- contact section -->
+      <!-- contact section -->
 
-    <section class="slider_section position-relative">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li
-            data-target="#customCarousel1"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-          <li data-target="#customCarousel1" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="box">
-              <div class="baby_detail">
-                <div class="baby_text">
-                  <h2>
-                    Shri <br />
-                    Guru Vashishtha Nyas
-                  </h2>
-                </div>
-                <a href="about.html"> Read More </a>
+    <section class="contact_section layout_padding-top" style="margin-bottom: 50px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <div class="contact-form">
+              <div class="heading_container">
+                <h2>Get In Touch</h2>
               </div>
-              <div class="care_detail">
-                <a href=""> Contact Us </a>
-                <div class="care_text">
-                  <h2>
-                    We will take <br />
-                    Care of <br />
-                    society
-                  </h2>
+              <form action="">
+                <input type="text" placeholder="Full name " />
+                <div class="top_input">
+                  <input type="email" placeholder="Email" />
+                  <input type="text" placeholder="Phone Number" />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="baby_detail">
-                <div class="baby_text">
-                  <h2>
-                    Shri <br />
-                    Guru Vashishtha Nyas
-                  </h2>
+                <input
+                  type="text"
+                  placeholder="Message"
+                  class="message_input"
+                />
+                <div class="btn-box">
+                  <button>Send</button>
                 </div>
-                <a href=""> Read More </a>
-              </div>
-              <div class="care_detail">
-                <a href=""> Contact Us </a>
-                <div class="care_text">
-                  <h2>
-                    We will take <br />
-                    Care of <br />
-                    society
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="baby_detail">
-                <div class="baby_text">
-                  <h2>
-                    Shri <br />
-                    Guru Vashishtha Nyas
-                  </h2>
-                </div>
-                <a href=""> Read More </a>
-              </div>
-              <div class="care_detail">
-                <a href=""> Contact Us </a>
-                <div class="care_text">
-                  <h2>
-                    We will take <br />
-                    Care of <br />
-                    society
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="box">
-              <div class="baby_detail">
-                <div class="baby_text">
-                  <h2>
-                    Shri <br />
-                    Guru Vashishtha Nyas
-                  </h2>
-                </div>
-                <a href=""> Read More </a>
-              </div>
-              <div class="care_detail">
-                <a href=""> Contact Us </a>
-                <div class="care_text">
-                  <h2>
-                    We will take <br />
-                    Care of <br />
-                    your Baby
-                  </h2>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -241,21 +206,21 @@
                 </a>
                 <a href="">
                   <i class="fa fa-envelope" aria-hidden="true"></i>
-                  <span> demo@gmail.com </span>
+                  <span> SgvNyas@gmail.com </span>
                 </a>
               </div>
             </div>
             <div class="info_social">
-              <a href="">
+              <a href="https://www.facebook.com/sgvnyas">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="https://twitter.com/sgvnyas">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <!-- <a href="">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
+              </a> -->
+              <a href="https://www.instagram.com/sgvnyas/">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
@@ -264,7 +229,7 @@
             <div class="info_link_box">
               <h5>Navigation</h5>
               <div class="info_links">
-                <a class="" href="index.html">
+                <a class="active" href="index.html">
                   <i class="fa fa-angle-right" aria-hidden="true"></i> Home
                   <span class="sr-only">(current)</span></a
                 >
@@ -272,20 +237,19 @@
                   <i class="fa fa-angle-right" aria-hidden="true"></i> About</a
                 >
                 <a class="" href="why.html">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i> Why Us
+                  <i class="fa fa-angle-right" aria-hidden="true"></i> Programs
                 </a>
                 <a class="" href="team.html">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i> Our
-                  Team</a
-                >
-                <a class="" href="testimonial.html">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i> Payments
+                </a>
+                <!-- <a class="" href="testimonial.html">
                   <i class="fa fa-angle-right" aria-hidden="true"></i>
                   Testimonial</a
-                >
-                <a class="active" href="contact.html">
+                > -->
+                <!-- <a class="" href="contact.html">
                   <i class="fa fa-angle-right" aria-hidden="true"></i> Contact
                   Us</a
-                >
+                > -->
               </div>
             </div>
           </div>
@@ -306,7 +270,7 @@
     <footer class="footer_section container-fluid">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved. Design by
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="https://natrajcomputers/">Website Builder</a>
       </p>
     </footer>
     <!-- footer section -->
