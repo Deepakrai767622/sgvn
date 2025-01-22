@@ -1597,6 +1597,11 @@ a:focus {
 
 // team page design
 
+.site-heading {
+  position: relative;
+  z-index: -100;
+}
+
 .site-heading h2 {
   display: block;
   font-weight: 700;
