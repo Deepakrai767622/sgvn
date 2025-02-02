@@ -142,7 +142,6 @@ p {
 
 ul.full_nav {
   /* ta bort list style (inga punkter) */
-  min-width: 70%;
   list-style-type: none;
   text-decoration: none;
 
@@ -176,12 +175,21 @@ ul.full_nav {
     font-weight: 500;
     font-size: 18px;
     padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px 10px;
   }
 
   a:hover,
   a:active {
-    background-color: $btnColor;
-    color: white;
+    border: 1px solid $btnColor;
+    color: $btnColor;
+  }
+
+  @media only screen and (max-width: 678px) {
+    ul.full_nav {
+      /* ta bort list style (inga punkter) */
+      width: 100% !important;
+    }
   }
 
   /*
@@ -576,101 +584,6 @@ a:focus {
 }
 
 /*end header section*/
-
-// slider section
-.slider_section {
-  background-image: url(../images/banner/image1.jpg);
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-  color: $white;
-
-  .row {
-  }
-
-  #customCarousel1,
-  .carousel-inner,
-  .carousel-item {
-    height: 100%;
-  }
-
-  #customCarousel1 {
-    width: 100%;
-    height: 100%;
-  }
-
-  .box {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    a {
-      @include hero_btn($btnColor, $white, 12px, 45px, 0);
-      text-transform: uppercase;
-    }
-
-    .baby_detail {
-      align-self: flex-start;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-
-      .baby_text {
-        padding: 25px 35px;
-        background-color: rgba($color: $primary1, $alpha: 0.9);
-        margin-bottom: 15px;
-      }
-
-      h2 {
-        text-transform: uppercase;
-      }
-    }
-
-    .care_detail {
-      align-self: flex-end;
-
-      .care_text {
-        padding: 25px 35px;
-        background-color: rgba($color: $primary1, $alpha: 0.9);
-        margin-top: 15px;
-      }
-
-      h2 {
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  .carousel-indicators {
-    left: initial;
-    bottom: initial;
-    top: 45px;
-    right: 0;
-    width: 50px;
-    height: 115px;
-    margin: 0;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    li {
-      width: 20px;
-      height: 20px;
-      opacity: 1;
-      margin: 0;
-      border: none;
-      background-color: transparent;
-      background-color: $btnColor;
-
-      &.active {
-        background-color: $primary1;
-      }
-    }
-  }
-}
-
-// end slider section
 
 // service section
 
@@ -1815,8 +1728,48 @@ a:focus {
   background-color: #cd486b;
 }
 
-/* footer section*/
+// pastevent section
 
+.pastevent {
+  border: 1px solid rgb(238, 96, 14);
+  padding: 20px 0;
+  margin: 50px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 10%);
+
+  h1 {
+    margin: 0 auto 30px auto;
+    text-decoration: underline;
+    color: #fd7e14;
+    text-align: center;
+  }
+
+  p {
+    font-size: 22px;
+    padding: 0 50px;
+  }
+}
+
+@import "events";
+
+@media only screen and (max-width: 600px) {
+  .pastevent {
+    margin: 25px 2px;
+  }
+
+  .pastevent h1 {
+    margin: 0 auto 30px auto;
+    text-decoration: underline;
+    color: #fd7e14;
+    text-align: center;
+  }
+
+  .pastevent p {
+    font-size: 18px;
+    padding: 20px 10px;
+  }
+}
+
+/* footer section*/
 .footer_section {
   background-color: #fdfdfe;
   text-align: center;
