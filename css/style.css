@@ -1499,11 +1499,11 @@ a:focus {
   cursor: pointer;
 }
 
-.active {
+.current-page .active {
   background: #0ab1ce;
 }
 
-.disable {
+.current-page .disable {
   background: #ccc;
 }
 
