@@ -46,15 +46,35 @@
       <div class="contact_nav_container">
         <div class="container">
           <div class="contact_nav">
-            <a href="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span> Address : Lucknow, India </span>
-            </a>
-            <a href="">
+            <div class="info_social">
+              <a
+                href="https://www.facebook.com/sgvnyas"
+                style="font-size: 16px; margin: 0 5px"
+              >
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://twitter.com/sgvnyas"
+                style="font-size: 16px; margin: 0 5px"
+              >
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <!-- <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a> -->
+              <a
+                href="https://www.instagram.com/sgvnyas/"
+                style="font-size: 16px; margin: 0 5px"
+              >
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+            <a href="mailto:SgvNyas@gmail.com">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span> Email : SgvNyas@gmail.com </span>
             </a>
-            <a href="">
+
+            <a href="tel:9711991644">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span> Phone Call : +91 9711991644 </span>
             </a>
@@ -71,20 +91,23 @@
                 <span class="s-3"> </span>
               </button>
             </div>
-            <div id="myNav" class="overlay">
-              <div class="menu_btn-style">
-                <button onclick="closeNav()">
-                  <span class="s-1"> </span>
-                  <span class="s-2"> </span>
-                  <span class="s-3"> </span>
-                </button>
-              </div>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="menu_btn-style">
+              <button onclick="closeNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
               <div class="overlay-content">
                 <a class="active" href="index.html">
                   Home <span class="sr-only">(current)</span></a
                 >
                 <a class="" href="about.html"> About</a>
                 <a class="" href="events.html"> Events </a>
+                <!-- <a class="" href="team.html"> Payment </a> -->
+                <!-- <a class="" href="testimonial.html"> Testimonial</a> -->
+                <a class="" href="contact.html"> Contact Us</a>
               </div>
             </div>
           </div>
@@ -98,22 +121,56 @@
                 <a href="about.html">About</a>
               </li>
               <li>
-                <a href="" style="pointer-events: none; cursor: default"
-                  >Events</a
-                >
+                <a href="/page/events.html">Events</a>
                 <!-- a sub menu -->
-                <ul>
-                  <li style="background: white">
-                    <a href="./page/events.html">Upcoming Events</a>
-                  </li>
-                  <li style="background: white">
-                    <a href="page/pastevents.html">Past Events</a>
-                  </li>
-                </ul>
+
+                <!-- <ul>
+                    style="pointer-events: none; cursor: default"
+                    <li style="background: white">
+                      <a href="./page/events.html">Upcoming Events</a>
+                    </li>
+
+                    <li style="background: white">
+                      <a href="page/pastevents.html">Past Events</a>
+                      <ul>
+                        <li>
+                          <a href="link7">Link 7</a>
+                        </li>
+                        <li>
+                          <a href="link8">Link 8</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul> -->
               </li>
+              <li style="background: white">
+                <a href="./page/team.html">Team</a>
+              </li>
+              <li style="background: white">
+                <a href="contact.html">Contact us</a>
+              </li>
+              <!-- <li>
+                <a href="link2">About</a>
+              </li>
+              <li>
+                <a href="link3">Link 3</a>
+              </li>
+              <li>
+                <a href="link4">Link 4</a>
+              </li> -->
             </ul>
           </div>
-          <div class="user_option"></div>
+          <div class="user_option">
+            <!-- <a href="">
+                <span> Login </span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a> -->
+            <!-- <form class="form-inline">
+                <button class="btn nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form> -->
+          </div>
         </div>
       </div>
     </header>
@@ -218,8 +275,8 @@
               </div>
               <div class="card">
                 <div class="card-image">
-                  <a href="/images/bevent/2024/image7.jpg"
-                    ><img src="/images/bevent/2024/image7.jpg" alt=""
+                  <a href="/images/event/2024/image7.jpg"
+                    ><img src="/images/event/2024/image7.jpg" alt=""
                   /></a>
                 </div>
                 <div class="card-info">
@@ -229,7 +286,10 @@
               </div>
               <div class="card">
                 <div class="card-image">
-                  <img src="/images/bevent/2024/image7.jpg" alt="" />
+                  <a href="/images/event/2024/image7.jpg">
+                    <img src="/images/event/2024/image7.jpg" alt="" />
+                    /></a
+                  >
                 </div>
                 <div class="card-info">
                   <!-- <h3>First Program</h3> -->
@@ -239,7 +299,7 @@
               <div class="card">
                 <div class="card-image">
                   <a href="/images/event/2024/image9.jpg"
-                    ><img src="/images/banner/image8.jpg" alt=""
+                    ><img src="/images/event/2024/image8.jpg" alt=""
                   /></a>
                 </div>
                 <div class="card-info">
